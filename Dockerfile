@@ -7,6 +7,7 @@ RUN dpkg-reconfigure -f noninteractive tzdata
 # Fix local and timezone
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 ENV DEBIAN_FRONTEND noninteractive
+COPY sources.list /etc/apt/
 RUN apt-get update
 
 RUN apt-get install -y \
@@ -23,13 +24,12 @@ RUN apt-get install -y \
   zlib1g-dev \
   gettext \
   libreadline-dev \
-  libssl-dev
-
-RUN wget -qO- https://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.4.tar.gz | tar xvz
-
-RUN apt-get install -y \
+  libssl-dev \
+  libffi-dev \
   bison \
   libicu-dev
+
+RUN wget -qO- https://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.4.tar.gz | tar xvz
 
 RUN cd ruby-2.2.4 && autoconf && ./configure --disable-install-doc && make && make install
 
