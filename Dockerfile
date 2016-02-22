@@ -7,7 +7,7 @@ RUN dpkg-reconfigure -f noninteractive tzdata
 # Fix local and timezone
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 ENV DEBIAN_FRONTEND noninteractive
-COPY sources.list /etc/apt/
+
 RUN apt-get update
 
 RUN apt-get install -y \
