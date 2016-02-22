@@ -34,7 +34,7 @@ RUN wget -qO- https://github.com/ruby/ruby/archive/v2_1_7.tar.gz | tar xvz
 
 RUN cd ruby-2_1_7 && autoconf && ./configure --disable-install-doc && make && make install
 
-RUN gem install --no-ri --no-rdoc --source https://ruby.taobao.org \
+RUN gem install --no-ri --no-rdoc \
 jekyll:3.0.3 \
 jekyll-sass-converter:1.3.0 \
 jekyll-textile-converter:0.1.0 \
