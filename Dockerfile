@@ -30,7 +30,7 @@ RUN apt-get install -y \
   bison \
   nodejs
 
-RUN wget -qO- https://github.com/ruby/ruby/archive/v2_1_7.tar.gz | tar xvz
+RUN wget -qO- https://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.4.tar.gz | tar xvz
 
 RUN cd ruby-2_1_7 && autoconf && ./configure --disable-install-doc && make && make install
 
