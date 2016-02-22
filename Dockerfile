@@ -32,10 +32,6 @@ RUN apt-get install -y \
 
 RUN wget -qO- https://github.com/ruby/ruby/archive/v2_1_7.tar.gz | tar xvz
 
-RUN apt-get install -y \
-  bison \
-  libicu-dev
-
 RUN cd ruby-2_1_7 && autoconf && ./configure --disable-install-doc && make && make install
 
 RUN gem install --no-ri --no-rdoc --source https://ruby.taobao.org \
