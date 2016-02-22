@@ -32,7 +32,7 @@ RUN apt-get install -y \
 
 RUN wget -qO- https://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.4.tar.gz | tar xvz
 
-RUN cd ruby-2_1_7 && autoconf && ./configure --disable-install-doc && make && make install
+RUN cd ruby-2.2.4 && autoconf && ./configure --disable-install-doc && make && make install
 
 RUN gem install --no-ri --no-rdoc \
 jekyll:3.0.3 \
