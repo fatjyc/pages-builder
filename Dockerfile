@@ -54,7 +54,7 @@ jekyll-paginate:1.1.0 \
 github-pages-health-check:1.1.0 \
 jekyll-coffeescript:1.0.1 \
 jekyll-seo-tag:1.3.2 \
-github-pages:57 \
+github-pages:58 \
 html-pipeline:2.3.0 \
 sass:3.4.21 \
 safe_yaml:1.0.4
