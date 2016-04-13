@@ -7,7 +7,7 @@ RUN dpkg-reconfigure -f noninteractive tzdata
 # Fix local and timezone
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 ENV DEBIAN_FRONTEND noninteractive
-
+RUN add-apt-repository ppa:git-core/ppa
 RUN apt-get update
 
 RUN apt-get install -y \
@@ -44,20 +44,21 @@ redcarpet:3.3.3 \
 RedCloth:4.2.9 \
 liquid:3.0.6 \
 rouge:1.10.1 \
-jemoji:0.5.1 \
-jekyll-mentions:1.0.1 \
-jekyll-redirect-from:0.9.1 \
+jemoji:0.6.2 \
+jekyll-mentions:1.1.2 \
+jekyll-redirect-from:0.10.0 \
 jekyll-sitemap:0.10.0 \
 jekyll-feed:0.4.0 \
 jekyll-gist:1.4.0 \
 jekyll-paginate:1.1.0 \
 github-pages-health-check:1.1.0 \
 jekyll-coffeescript:1.0.1 \
-jekyll-seo-tag:1.3.2 \
-github-pages:58 \
+jekyll-seo-tag:1.3.3 \
+github-pages:67 \
 html-pipeline:2.3.0 \
-sass:3.4.21 \
-safe_yaml:1.0.4
+sass:3.4.22 \
+safe_yaml:1.0.4 \
+jekyll-github-metadata:1.10.0
 
 # other needed gems
 RUN gem install --no-ri --no-rdoc \
