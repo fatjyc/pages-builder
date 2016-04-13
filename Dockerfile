@@ -1,5 +1,5 @@
 # Base
-FROM ubuntu:trusty
+FROM ubuntu@sha256:a3799e46440cabaa5414d42972b1693980b30bd2772b969fe11d08d99a8b753c
 # Set the locale
 RUN locale-gen en_US.UTF-8
 RUN echo "Asia/Shanghai" > /etc/timezone
