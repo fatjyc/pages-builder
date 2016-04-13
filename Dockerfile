@@ -7,7 +7,7 @@ RUN dpkg-reconfigure -f noninteractive tzdata
 # Fix local and timezone
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get install -y software-properties-common python-software-properties
+RUN apt-get install -y software-properties-common
 RUN add-apt-repository ppa:git-core/ppa
 RUN apt-get update
 
