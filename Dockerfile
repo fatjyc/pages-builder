@@ -36,7 +36,7 @@ RUN cd ruby-2.2.4 && autoconf && ./configure --disable-install-doc && make && ma
 
 # gem for github recommended
 RUN gem install --no-ri --no-rdoc \
-jekyll:3.0.3 \
+jekyll:3.1.3 \
 jekyll-sass-converter:1.3.0 \
 jekyll-textile-converter:0.1.0 \
 kramdown:1.10.0 \
@@ -49,17 +49,18 @@ jemoji:0.6.2 \
 jekyll-mentions:1.1.2 \
 jekyll-redirect-from:0.10.0 \
 jekyll-sitemap:0.10.0 \
-jekyll-feed:0.4.0 \
+jekyll-feed:0.5.1 \
 jekyll-gist:1.4.0 \
 jekyll-paginate:1.1.0 \
 github-pages-health-check:1.1.0 \
 jekyll-coffeescript:1.0.1 \
-jekyll-seo-tag:1.3.3 \
-github-pages:67 \
-html-pipeline:2.3.0 \
+jekyll-seo-tag:1.4.0 \
+github-pages:78 \
+html-pipeline:2.4.1 \
 sass:3.4.22 \
 safe_yaml:1.0.4 \
-jekyll-github-metadata:1.10.0
+jekyll-github-metadata:1.11.1 \
+listen:3.0.6
 
 # other needed gems
 RUN gem install --no-ri --no-rdoc \
