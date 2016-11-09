@@ -36,6 +36,8 @@ RUN wget -qO- http://cache.ruby-lang.org/pub/ruby/2.3/ruby-2.3.1.tar.gz | tar xv
 
 RUN cd ruby-2.3.1 && autoconf && ./configure --disable-install-doc && make && make install
 
+RUN gem install --no-ri --no-rdoc bundler
+
 # gem for github recommended
 RUN gem install --no-ri --no-rdoc \
 jekyll:3.3.0 \
