@@ -85,5 +85,4 @@ tilt \
 toml \
 yajl-ruby
 
-RUN curl -sL https://deb.nodesource.com/setup_6.x | bash - \
-    && apt-get install -y nodejs
+RUN curl -sL https://deb.nodesource.com/setup_6.x | bash - && apt-get install nodejs
